@@ -2,15 +2,15 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+const accessToken = import.meta.env.VITE_API_KEY;
+
 const useGetForecast = () => {
     const [city, setCity] = useState('London');
     const [forecastData, setForecastData] = useState({});
+    const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=${accessToken}&q=${city}&days=1&aqi=no&alerts=no`;
 
     const fetchData = async () => {
-        const accessToken = import.meta.env.VITE_API_KEY;
-        const endpoint = `http://api.weatherapi.com/v1/forecast.json?key=${accessToken}&q=${city}&days=1&aqi=no&alerts=no`;
-
-        const response = await axios.get(endpoint);
+        const response = await axios.get(apiUrl);
 
         return response.data;
     };
