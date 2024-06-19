@@ -1,17 +1,20 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+
+const GlobalContext = createContext();
 
 const accessToken = import.meta.env.VITE_API_KEY;
 
-const useGetForecast = () => {
+export const useGlobalContext = () => useContext(GlobalContext);
+
+const AppContext = ({children}) => {
     const [city, setCity] = useState('London');
     const [forecastData, setForecastData] = useState({});
     const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=${accessToken}&q=${city}&days=1&aqi=no&alerts=no`;
 
     const fetchData = async () => {
         const response = await axios.get(apiUrl);
-
         return response.data;
     };
 
@@ -24,7 +27,11 @@ const useGetForecast = () => {
         setForecastData(data);
     }, [data])
 
-    return {city, setCity, forecastData, isLoading, isError};
+    const values = {city, setCity, forecastData, isLoading, isError}
+
+    return <GlobalContext.Provider value={values}>
+        {children}
+    </GlobalContext.Provider>
 }
 
-export default useGetForecast;
+export default AppContext;
