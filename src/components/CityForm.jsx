@@ -1,5 +1,3 @@
-// import useGetForecast from "../hooks/useGetForecast";
-
 import { useGlobalContext } from "../context/appContext";
 
 const CityForm = () => {

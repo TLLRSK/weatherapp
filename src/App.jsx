@@ -1,12 +1,13 @@
-import CityForm from "./components/CityForm";
-import { useGlobalContext } from "./context/appContext";
+import {
+  CurrentDay,
+  CityForm
+} from "./util";
 
 function App() {
-  const {city} = useGlobalContext();
   return (
     <main className="weatherapp">
       <CityForm/>
-      <h3>{city}</h3>
+      <CurrentDay/>
     </main>
   );
 }
