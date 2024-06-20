@@ -2,21 +2,19 @@ import { useGlobalContext } from "../context/appContext";
 
 const CurrentDay = () => {
     const { location, current, forecast, isLoading, isError } = useGlobalContext();
-    const { name, country, localtime_epoch } = location || {}
-    const { condition } = current || {}
-    const { forecastday } = forecast || {};
-
-    // const {date, day, hour} = forecastday[0] || {};
-    const forecastDay = forecastday ? forecastday[0] : [{}];
-
-    const { date, day, hour } = forecastDay || {};
 
     if (isLoading) {
         return <div>Loading...</div>
     }
+
     if (isError) {
         return <div>Something went wrong.</div>
     }
+
+    const { name, country, localtime_epoch } = location;
+    const { condition } = current;
+    const { forecastday } = forecast;
+    const { date, day, hour } = forecastday[0];
 
     return <section className="current-day">
         <div className="location-container">

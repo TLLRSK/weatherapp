@@ -1,4 +1,5 @@
-const Hour = () => {
+const Hour = (hour) => {
+    const {} = hour 
     return <li className="hour">
     </li>
 }
