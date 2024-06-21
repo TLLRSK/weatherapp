@@ -10,7 +10,6 @@ const CityForm = () => {
 
     const {setCity} = useGlobalContext();
 
-
     return <form className="city-form" onSubmit={changeCity}>
         <label>Insert a city:</label>
         <input type="text" name="city" id="city" placeholder="Valencia"/>

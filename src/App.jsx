@@ -5,7 +5,7 @@ import {
 
 function App() {
   return (
-    <main className="weatherapp">
+    <main className="weatherapp bg-primary">
       <CityForm/>
       <CurrentDay/>
     </main>
