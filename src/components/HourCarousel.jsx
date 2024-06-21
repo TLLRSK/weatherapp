@@ -16,8 +16,23 @@ const HourCarousel = () => {
     
     const { hour } = forecastday[0];
 
-    return (hour?.map((singleHour, i) => {
-        return <Hour {...singleHour} key={i}/>
-    }))
+    return (
+    <swiper-container
+        slides-per-view="auto"
+        space-between="0"
+    >
+        {(hour?.map((singleHour, i) => {
+            return <swiper-slide key={i}>
+
+                <Hour {...singleHour}/>
+
+            </swiper-slide>
+        }))}
+
+    </swiper-container>
+    
+    );
+    
 }
+
 export default HourCarousel;

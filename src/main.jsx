@@ -5,6 +5,8 @@ import './index.css'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import AppContext from './context/appContext.jsx';
+import { register } from 'swiper/element/bundle';
+register();
 
 const queryClient = new QueryClient();
 
