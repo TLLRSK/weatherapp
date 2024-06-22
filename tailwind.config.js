@@ -23,6 +23,14 @@ export default {
         "xl": "6.4rem",
         "xxl": "12.1rem",
       },
+      lineHeight: {
+        "s": "1.2rem",
+        "m": "1.6rem",
+        "ml": "2rem",
+        "l": "2.4rem",
+        "xl": "6.4rem",
+        "xxl": "1.72rem",
+      },
       spacing: {
         1: '1.2rem',
         2: '1.6rem',

@@ -5,34 +5,38 @@ const CurrentDay = () => {
     const { location, current, forecast, isLoading, isError } = useGlobalContext();
 
     if (isLoading) {
-        return <div>Loading...</div>
+        return <div className="text-m">Loading...</div>
     }
 
     if (isError) {
-        return <div>Something went wrong.</div>
+        return <div className="text-m">Something went wrong.</div>
     }
 
     const { name, country } = location;
-    const { condition } = current;
+    const { condition, temp_c } = current;
     const { forecastday } = forecast;
     
-    const { date, day } = forecastday[0];
+    const { day } = forecastday[0];
 
     return <section className="current-day">
 
         <div className="location-container">
-            <h2>{name}, {country}</h2>
-            <p>{date}</p>
+            <h2 className="text-ml">{name}</h2>
+            <h3 className="text-s">{country}</h3>
         </div>
 
         <div className="forecast-container">
-            <div className="condition">
-                <p>{condition.text}</p>
+            <div className="temperatures flex">
+                <div className="current">
+                    <p className="text-xxl">{temp_c}<span className="text-xl">°C</span></p>
+                </div>
+                <div className="maxmin">
+                    <p className="text-ml">{day.maxtemp_c}°C</p>
+                    <p className="text-ml">{day.mintemp_c}°C</p>
+                </div>
             </div>
-
-            <div className="temperatures">
-                <p>{day.maxtemp_c} ºC</p>
-                <p>{day.mintemp_c} ºC</p>
+            <div className="condition">
+                <p className="text-ml">{condition.text}</p>
             </div>
         </div>
 
