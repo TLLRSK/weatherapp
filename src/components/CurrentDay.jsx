@@ -12,7 +12,7 @@ const CurrentDay = () => {
         return <div>Something went wrong.</div>
     }
 
-    const { name, country, localtime_epoch } = location;
+    const { name, country } = location;
     const { condition } = current;
     const { forecastday } = forecast;
     
