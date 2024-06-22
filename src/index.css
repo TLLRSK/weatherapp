@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-swiper-slide {
-    @apply w-fit;
+@layer base {
+    
+    html {
+        font-size: 62.5%;
+        font-family: 'Supreme', 'Arial', 'Helvetica', 'sans-serif';
+    }
+    @font-face {
+        font-family: 'Supreme';
+        src: 
+            url('supreme-bold-webfont.woff2') format('woff2'),
+            url('supreme-extrabold-webfont.woff2') format('woff2'),
+            url('supreme-light-webfont.woff2') format('woff2'),
+            url('supreme-medium-webfont.woff2') format('woff2'),
+            url('supreme-regular-webfont.woff2') format('woff2'),
+            url('supreme-thin-webfont.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    swiper-slide {
+        @apply w-fit;
+    }
 }
