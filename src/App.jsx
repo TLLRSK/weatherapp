@@ -6,7 +6,7 @@ import {
 
 function App() {
   return (
-    <main className="weatherapp bg-primary">
+    <main className="weatherapp bg-primary h-lvh flex flex-col">
       <CityForm/>
       <CurrentDay/>
     </main>
