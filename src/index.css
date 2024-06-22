@@ -44,6 +44,9 @@
         font-style: normal;
     }
     swiper-slide {
-        @apply w-fit;
+        @apply w-fit border-r-2 border-secondary border-dashed;
+    }
+    swiper-container{
+        @apply border-t-2 border-secondary border-dashed;
     }
 }

@@ -1,7 +1,8 @@
 
 import {
   CurrentDay,
-  CityForm
+  CityForm,
+  HourCarousel
 } from "./util";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <main className="weatherapp bg-primary h-lvh flex flex-col">
       <CityForm/>
       <CurrentDay/>
+      <HourCarousel />
     </main>
   );
 }
