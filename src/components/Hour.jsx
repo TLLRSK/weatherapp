@@ -1,12 +1,14 @@
-const Hour = (hour) => {
-    const {time, temp_c, condition} = hour;
-    const formattedTime = time.split(' ').pop();
+import { SignageHour } from "../util";
 
-    return <li className="hour-container">
+const Hour = (hour) => {
+    const {time, temp_c} = hour;
+    const formattedTime = time.split(' ').pop();
+    
+    return <li className="hour-container p-2">
 
         <p>{temp_c}</p>
 
-        <img src={condition.icon} alt="condition.text" />
+        <SignageHour {...hour}/>
 
         <p>{formattedTime}</p>
     </li>

@@ -1,5 +1,4 @@
 import { useGlobalContext } from "../context/appContext";
-import { HourCarousel} from "../util";
 
 const CurrentDay = () => {
     const { location, current, forecast, isLoading, isError } = useGlobalContext();
