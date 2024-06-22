@@ -18,7 +18,7 @@ const CurrentDay = () => {
     
     const { day } = forecastday[0];
 
-    return <section className="current-day">
+    return <section className="current-day p-2">
 
         <div className="location-container">
             <h2 className="text-ml">{name}</h2>
@@ -26,11 +26,11 @@ const CurrentDay = () => {
         </div>
 
         <div className="forecast-container">
-            <div className="temperatures flex">
+            <div className="temperatures flex justify-between">
                 <div className="current">
-                    <p className="text-xxl">{temp_c}<span className="text-xl">°C</span></p>
+                    <p className="text-xxl leading-xxl">{temp_c}<span className="text-xl">°C</span></p>
                 </div>
-                <div className="maxmin">
+                <div className="maxmin flex flex-col justify-between">
                     <p className="text-ml">{day.maxtemp_c}°C</p>
                     <p className="text-ml">{day.mintemp_c}°C</p>
                 </div>

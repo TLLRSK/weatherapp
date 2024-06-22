@@ -29,7 +29,7 @@ export default {
         "ml": "2rem",
         "l": "2.4rem",
         "xl": "6.4rem",
-        "xxl": "1.72rem",
+        "xxl": ".75",
       },
       spacing: {
         1: '1.2rem',
