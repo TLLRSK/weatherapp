@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 
+import plugin from 'tailwindcss/plugin';
+
 export default {
-  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{html,js,jsx}"],
   theme: {
     extend: {
       colors: {
-        "primary": "rgb(248, 247, 244, 0.5)",
+        "primary": "rgb(248, 247, 244)",
         "secondary": "rgb(84, 84, 84)",
         "gray-0": "rgba(174, 174, 174, 0.4)",
         "gray-100": "rgba(174, 174, 174, 0.5)",
@@ -22,7 +24,7 @@ export default {
         "ml": "2rem",
         "l": "2.4rem",
         "xl": "6.4rem",
-        "xxl": "12.1rem",
+        "xxl": "8rem",
       },
       lineHeight: {
         "s": "1.2rem",
