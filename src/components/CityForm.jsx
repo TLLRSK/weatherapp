@@ -1,4 +1,5 @@
 import { useGlobalContext } from "../context/appContext";
+import IconSearch from "./IconSearch";
 
 const CityForm = () => {
 
@@ -20,7 +21,9 @@ const CityForm = () => {
                 id="city" 
                 className="text-m uppercase border-b-2 border-gray-200 border-dashed color-primary bg-transparent flex-1 focus:outline-gray-100"
             />
-            <button type="submit" className="text-m uppercase bg-gray-100 w-3 h-3 rounded-full">Go</button>
+            <button type="submit" className="w-3 h-3 flex items-center justify-center text-m uppercaserounded-full">
+                <IconSearch/>
+            </button>
         </form>
     </div>
 }
