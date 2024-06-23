@@ -54,34 +54,36 @@
     .signage--hour {
         width: 2.4rem;
         height: 2.4rem;
+    }
+    [class^="signage"] {
         border-radius: 50%;
         z-index: 1;
     }
-    .signage--hour:nth-child(2) {
+    [class^="signage"]:nth-child(2) {
         z-index: 0;
     }
-    .sunny {
+    [class^="signage"].sunny {
         background-color: theme('colors.sunny-0');
     }
-    .sunny:nth-child(2) {
+    [class^="signage"].sunny:nth-child(2) {
         background-color: theme('colors.sunny-100');
     }
-    .partlyCloudy {
+    [class^="signage"].partlyCloudy {
         background-color: theme('colors.sunny-0');
     }
-    .partlyCloudy:nth-child(2) {
+    [class^="signage"].partlyCloudy:nth-child(2) {
         background-color: theme('colors.cloudy');
     }
-    .cloudy {
+    [class^="signage"].cloudy {
         background-color: theme('colors.cloudy');
     }
-    .partlyRainy {
+    [class^="signage"].partlyRainy {
         background-color: theme('colors.cloudy');
     }
-    .partlyRainy:nth-child(2) {
+    [class^="signage"].partlyRainy:nth-child(2) {
         background-color: theme('colors.rainy');
     }
-    .rainy {
+    [class^="signage"].rainy {
         background-color: theme('colors.rainy');
     }
 }
