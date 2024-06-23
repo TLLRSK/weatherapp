@@ -43,10 +43,45 @@
         font-weight: normal;
         font-style: normal;
     }
+}
+@layer components {
     swiper-slide {
         @apply w-fit border-r-2 border-secondary border-dashed;
     }
     swiper-container{
         @apply border-t-2 border-secondary border-dashed;
+    }
+    .signage--hour {
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    .signage--hour:nth-child(2) {
+        z-index: 0;
+    }
+    .sunny {
+        background-color: theme('colors.sunny-0');
+    }
+    .sunny:nth-child(2) {
+        background-color: theme('colors.sunny-100');
+    }
+    .partlyCloudy {
+        background-color: theme('colors.sunny-0');
+    }
+    .partlyCloudy:nth-child(2) {
+        background-color: theme('colors.cloudy');
+    }
+    .cloudy {
+        background-color: theme('colors.cloudy');
+    }
+    .partlyRainy {
+        background-color: theme('colors.cloudy');
+    }
+    .partlyRainy:nth-child(2) {
+        background-color: theme('colors.rainy');
+    }
+    .rainy {
+        background-color: theme('colors.rainy');
     }
 }

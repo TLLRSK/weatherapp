@@ -1,4 +1,4 @@
-import { SignageHour } from "../util";
+import { HourSignage } from "../util";
 
 const Hour = (hour) => {
     const {time, temp_c} = hour;
@@ -6,9 +6,9 @@ const Hour = (hour) => {
     
     return <li className="hour-container p-2">
 
-        <p>{temp_c}</p>
+        <p>{temp_c}°C</p>
 
-        <SignageHour {...hour}/>
+        <HourSignage {...hour}/>
 
         <p>{formattedTime}</p>
     </li>

@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
-  content: ["./src/**/*.{html,js,jsx}"],
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -32,11 +33,12 @@ export default {
         "xxl": ".75",
       },
       spacing: {
+        0: '.8rem',
         1: '1.2rem',
         2: '1.6rem',
         3: '2.4rem',
       },
     },
   },
-  plugins: [],
+  plugins: []
 }
