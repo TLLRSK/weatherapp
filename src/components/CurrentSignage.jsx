@@ -1,8 +1,8 @@
 import Signage from "./Signage";
 
-const HourSignage = (hour) => {
+const CurrentSignage = (condition) => {
 
-    const code = hour.condition.code;
+    const code = condition.code;
 
     const conditionCodes = {
         sunny: ["1000"],
@@ -25,9 +25,8 @@ const HourSignage = (hour) => {
 
     const conditionText = getConditionText(code);
 
-    return <div className="signage--hour flex flex-col">
+    return  <div className="signage--current">
         <Signage condition={conditionText}/>
-    </div> 
-
+    </div>
 }
-export default HourSignage;
+export default CurrentSignage;

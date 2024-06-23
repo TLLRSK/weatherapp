@@ -1,4 +1,5 @@
 import { useGlobalContext } from "../context/appContext";
+import CurrentSignage from "./CurrentSignage";
 
 const CurrentDay = () => {
     const { location, current, forecast, isLoading, isError } = useGlobalContext();
@@ -21,11 +22,11 @@ const CurrentDay = () => {
     return <section className="current-day p-2 flex-1 flex flex-col">
 
         <div className="location-container">
-
             <h2 className="text-l">{name}</h2>
             <h3 className="text-s">{country}</h3>
-
         </div>
+
+        <CurrentSignage {...condition} />
 
         <div className="forecast-container flex-1 flex flex-col justify-end">
             <div className="temperatures flex justify-between">

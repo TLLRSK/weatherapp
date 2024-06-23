@@ -51,39 +51,54 @@
     swiper-container{
         @apply border-t-2 border-secondary border-dashed;
     }
+    
+    [class^="signage--"] {
+        .signage {
+            @apply rounded-full z-10;
+        }
+        .signage:nth-child(2) {
+            @apply z-0;
+        }
+    }
+    .signage--current {
+        @apply flex flex-col items-center;
+        .signage {
+            @apply w-5 h-5 translate-y-4;
+        }
+        .signage:nth-child(2) {
+            @apply -translate-y-4;
+        }
+    }
     .signage--hour {
-        width: 2.4rem;
-        height: 2.4rem;
+        .signage {
+            @apply w-3 h-3 translate-y-0;
+        }
+        .signage:nth-child(2) {
+            @apply -translate-y-0
+        }
     }
-    [class^="signage"] {
-        border-radius: 50%;
-        z-index: 1;
-    }
-    [class^="signage"]:nth-child(2) {
-        z-index: 0;
-    }
-    [class^="signage"].sunny {
+    .signage.sunny {
         background-color: theme('colors.sunny-0');
     }
-    [class^="signage"].sunny:nth-child(2) {
+    .signage.sunny:nth-child(2) {
         background-color: theme('colors.sunny-100');
     }
-    [class^="signage"].partlyCloudy {
+    .signage.partlyCloudy {
         background-color: theme('colors.sunny-0');
     }
-    [class^="signage"].partlyCloudy:nth-child(2) {
+    .signage.partlyCloudy:nth-child(2) {
         background-color: theme('colors.cloudy');
     }
-    [class^="signage"].cloudy {
+    .signage.cloudy {
         background-color: theme('colors.cloudy');
     }
-    [class^="signage"].partlyRainy {
+    .signage.partlyRainy {
         background-color: theme('colors.cloudy');
     }
-    [class^="signage"].partlyRainy:nth-child(2) {
+    .signage.partlyRainy:nth-child(2) {
         background-color: theme('colors.rainy');
     }
-    [class^="signage"].rainy {
+    .signage.rainy {
         background-color: theme('colors.rainy');
     }
 }

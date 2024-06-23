@@ -33,10 +33,12 @@ export default {
         "xxl": ".75",
       },
       spacing: {
-        0: '.8rem',
+        0: '.6rem',
         1: '1.2rem',
         2: '1.6rem',
         3: '2.4rem',
+        4: '6.4rem',
+        5: '24rem',
       },
     },
   },
