@@ -18,7 +18,6 @@ const CurrentDay = () => {
     const { forecastday } = forecast;
     
     const { day } = forecastday[0];
-    const formattedTemperature = Math.trunc(temp_c);
 
     return <section className="current-day p-2 flex-1 flex flex-col">
 
@@ -32,8 +31,9 @@ const CurrentDay = () => {
             <CurrentSignage {...condition} />
 
             <div className="temperatures flex justify-between">
+
                 <div className="current">
-                    <p className="text-xxl leading-xxl">{formattedTemperature}<span className="text-xl">°C</span></p>
+                    <p className="text-xxl leading-xxl">{Math.trunc(temp_c)}<span className="text-xl">°C</span></p>
                 </div>
 
                 <div className="maxmin flex flex-col justify-between">
@@ -41,14 +41,16 @@ const CurrentDay = () => {
                         <IconArrowUp className={"fill-secondary w-3 h-3"}/>
                         <p className="text-ml">{Math.trunc(day.maxtemp_c)}°C</p>
                     </div>
+
                     <div className="flex items-center gap-1">
                         <IconArrowDown className={"fill-secondary w-3 h-3"}/>
                         <p className="text-ml">{Math.trunc(day.mintemp_c)}°C</p>
                     </div>
                 </div>
+
             </div>
 
-            <div className="condition">
+            <div className="condition mt-2">
                 <p className="text-ml">{condition.text}</p>
             </div>
 
