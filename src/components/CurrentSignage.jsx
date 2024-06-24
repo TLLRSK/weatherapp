@@ -25,7 +25,7 @@ const CurrentSignage = (condition) => {
 
     const conditionText = getConditionText(code);
 
-    return  <div className="signage--current">
+    return  <div className="signage--current flex-1 flex flex-col justify-center">
         <Signage condition={conditionText}/>
     </div>
 }

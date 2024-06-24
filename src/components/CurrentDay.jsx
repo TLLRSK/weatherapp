@@ -26,11 +26,11 @@ const CurrentDay = () => {
             <h3 className="text-s">{country}</h3>
         </div>
 
-        <CurrentSignage {...condition} />
+        <div className="forecast-container flex-1 flex flex-col">
 
-        <div className="forecast-container flex-1 flex flex-col justify-end">
+            <CurrentSignage {...condition} />
+
             <div className="temperatures flex justify-between">
-
                 <div className="current">
                     <p className="text-xxl leading-xxl">{formattedTemperature}<span className="text-xl">°C</span></p>
                 </div>

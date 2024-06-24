@@ -14,7 +14,6 @@ const HourSignage = (hour) => {
     
     const getConditionText = (code) => {
         const codeString = code.toString();
-        console.log("codeString: ", codeString)
         for(const [key, values] of Object.entries(conditionCodes)) {
             if (values.includes(codeString)) {
                 return key;
@@ -25,7 +24,7 @@ const HourSignage = (hour) => {
 
     const conditionText = getConditionText(code);
 
-    return <div className="signage--hour flex flex-col">
+    return <div className="signage--hour flex flex-col justify-center">
         <Signage condition={conditionText}/>
     </div> 
 
