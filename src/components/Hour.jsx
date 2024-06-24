@@ -6,7 +6,7 @@ const Hour = (hour) => {
     
     return <li className="hour-container p-2 flex flex-col items-center justify-between h-full">
 
-        <p className="text-s">{temp_c}°C</p>
+        <p className="text-s font-bold">{temp_c}°</p>
 
         <HourSignage {...condition}/>
 

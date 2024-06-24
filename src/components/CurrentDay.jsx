@@ -33,7 +33,7 @@ const CurrentDay = () => {
             <div className="temperatures flex justify-between">
 
                 <div className="current">
-                    <p className="text-xxl leading-xxl">{Math.trunc(temp_c)}<span className="text-xl">°C</span></p>
+                    <p className="text-xxl leading-xxl">{Math.trunc(temp_c)}<span className="text-l font-semibold">°C</span></p>
                 </div>
 
                 <div className="maxmin flex flex-col justify-between">

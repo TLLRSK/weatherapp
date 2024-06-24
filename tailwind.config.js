@@ -1,7 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-import plugin from 'tailwindcss/plugin';
-
 export default {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
@@ -19,28 +17,28 @@ export default {
         "hot": "rgba(255, 118, 74, 0.75)",
       },
       fontSize: {
-        "s": "1.2rem",
-        "m": "1.6rem",
-        "ml": "2rem",
-        "l": "2.4rem",
-        "xl": "6.4rem",
-        "xxl": "8rem",
+        "s": "clamp(1rem, 3vw, 1.2rem)",
+        "m": "clamp(1.4rem, 3vw, 1.6rem)",
+        "ml": "clamp(1.8rem, 3vw, 2rem)",
+        "l": "clamp(2rem, 3vw, 2.4rem)",
+        "xl": "clamp(6rem, 4vw, 6.4rem)",
+        "xxl": "clamp(10rem, 4vw, 12rem)",
       },
       lineHeight: {
-        "s": "1.2rem",
-        "m": "1.6rem",
-        "ml": "2rem",
-        "l": "2.4rem",
-        "xl": "6.4rem",
+        "s": "clamp(1rem, 3vw, 1.2rem)",
+        "m": "clamp(1.4rem, 3vw, 1.6rem)",
+        "ml": "clamp(1.8rem, 3vw, 2rem)",
+        "l": "clamp(2rem, 3vw, 2.4rem)",
+        "xl": "clamp(6rem, 4vw, 6.4rem)",
         "xxl": ".75",
       },
       spacing: {
         0: '.6rem',
-        1: '1.2rem',
-        2: '1.6rem',
-        3: '2.4rem',
-        4: '6.4rem',
-        5: '24rem',
+        1: 'clamp(1rem, 3vw, 1.2rem)',
+        2: 'clamp(1.4rem, 3vw, 1.6rem)',
+        3: 'clamp(2rem, 3vw, 2.4rem)',
+        4: 'clamp(6rem, 3vw, 6.4rem)',
+        5: 'clamp(16rem, 3vw, 22rem)',
       },
     },
   },
