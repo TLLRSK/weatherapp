@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useGlobalContext } from "../context/appContext";
-import IconSearch from "./IconSearch";
+import { IconSearch } from "../util";
 
 const CityForm = () => {
     const [cityValue, setCityValue] = useState('');
@@ -18,7 +18,7 @@ const CityForm = () => {
 
     return <div className="form-container flex flex-col p-2">
         <form onSubmit={submitCity} className="city-form flex items-center bg-primary gap-1 z-10 left-2 right-2" >
-            
+
             <label className="uppercase text-m">City:</label>
 
             <input 

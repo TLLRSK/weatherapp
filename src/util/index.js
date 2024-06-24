@@ -6,6 +6,11 @@ export {default as HourCarousel} from '../components/HourCarousel';
 export {default as HourSignage} from '../components/HourSignage';
 export {default as Signage} from '../components/Signage';
 
+// Icons
+export {default as IconSearch} from '../components/icons/IconSearch';
+export {default as IconArrowUp} from '../components/icons/IconArrowUp';
+export {default as IconArrowDown} from '../components/icons/IconArrowDown';
+
 // Hooks
 export {default as useForecastData} from '../hooks/useForecastData';
 export {default as useConditionCodes} from '../hooks/useConditionCodes';

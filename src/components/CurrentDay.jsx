@@ -1,4 +1,5 @@
 import { useGlobalContext } from "../context/appContext";
+import { IconArrowDown, IconArrowUp } from "../util";
 import CurrentSignage from "./CurrentSignage";
 
 const CurrentDay = () => {
@@ -36,8 +37,14 @@ const CurrentDay = () => {
                 </div>
 
                 <div className="maxmin flex flex-col justify-between">
-                    <p className="text-ml">{day.maxtemp_c}°C</p>
-                    <p className="text-ml">{day.mintemp_c}°C</p>
+                    <div className="flex items-center gap-1">
+                        <IconArrowUp className={"fill-secondary w-3 h-3"}/>
+                        <p className="text-ml">{Math.trunc(day.maxtemp_c)}°C</p>
+                    </div>
+                    <div className="flex items-center gap-1">
+                        <IconArrowDown className={"fill-secondary w-3 h-3"}/>
+                        <p className="text-ml">{Math.trunc(day.mintemp_c)}°C</p>
+                    </div>
                 </div>
             </div>
 
