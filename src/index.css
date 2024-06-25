@@ -12,6 +12,7 @@
     body {
         line-height: 1;
         -webkit-font-smoothing: antialiased;
+        @apply h-dvh bg-gray-0;
     }
     img, picture, video, canvas, svg {
         display: block;
@@ -26,6 +27,7 @@
     }
     #root, #__next {
         isolation: isolate;
+        @apply h-full flex flex-col;
     }
     html {
         font-size: 62.5%;
