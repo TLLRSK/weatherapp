@@ -18,6 +18,7 @@ const CurrentDay = () => {
     const { forecastday } = forecast;
     
     const { day } = forecastday[0];
+    const forecastData = {condition, temp_c};
 
     return <section className="current-day p-2 flex-1 flex flex-col">
 
@@ -28,7 +29,7 @@ const CurrentDay = () => {
 
         <div className="forecast-container flex-1 flex flex-col">
 
-            <CurrentSignage {...condition} />
+            <CurrentSignage {...forecastData} />
 
             <div className="temperatures flex justify-between">
 

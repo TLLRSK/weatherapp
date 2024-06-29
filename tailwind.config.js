@@ -12,9 +12,11 @@ export default {
         "gray-200": "rgba(174, 174, 174)",
         "sunny-0": "rgba(230, 235, 0, 0.75)",
         "sunny-100": "rgba(234, 210, 0, 0.6)",
+        "misty": "rgba(174, 174, 174, 0.3)",
         "cloudy": "rgba(174, 174, 174, 0.75)",
         "rainy": "rgba(77, 141, 200, 0.75)",
         "hot": "rgba(255, 118, 74, 0.75)",
+        "snowy": "rgba(202, 223, 255, 0.75)",
       },
       fontSize: {
         "s": "clamp(1rem, 3vw, 1.2rem)",

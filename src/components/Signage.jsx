@@ -1,14 +1,12 @@
-const Signage = (conditionObject) => {
-    const {condition} = conditionObject;
+const Signage = ({signages}) => {
     return (
-        condition === 'rainy' || 
-        condition === 'cloudy' ? 
+        signages.length == 1 ?
         (
-            <div className={`signage-ellipse--single rounded-full z-10 ${condition}`}></div>
+            <div className={`signage-ellipse--single rounded-full z-10 ${signages[0]}`}></div>
         ) : (
             <>
-            <div className={`signage-ellipse--couple rounded-full z-10 ${condition}`}></div>
-            <div className={`signage-ellipse--couple rounded-full z-0 ${condition}`}></div>
+            <div className={`signage-ellipse--couple rounded-full z-10 ${signages[0]}`}></div>
+            <div className={`signage-ellipse--couple rounded-full z-0 ${signages[1]}`}></div>
             </>
         )
     )

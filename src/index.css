@@ -76,28 +76,25 @@
             @apply -translate-y-0;
         }
     }
-    [class^="signage-ellipse"].sunny {
+    [class^="signage-ellipse"].sunny-0 {
         background-color: theme('colors.sunny-0');
     }
-    [class^="signage-ellipse"].sunny:nth-child(2) {
+    [class^="signage-ellipse"].sunny-100 {
         background-color: theme('colors.sunny-100');
     }
-    [class^="signage-ellipse"].partlyCloudy {
-        background-color: theme('colors.sunny-0');
-    }
-    [class^="signage-ellipse"].partlyCloudy:nth-child(2) {
-        background-color: theme('colors.cloudy');
+    [class^="signage-ellipse"].misty {
+        background-color: theme('colors.misty');
     }
     [class^="signage-ellipse"].cloudy {
         background-color: theme('colors.cloudy');
     }
-    [class^="signage-ellipse"].partlyRainy {
-        background-color: theme('colors.cloudy');
-    }
-    [class^="signage-ellipse"].partlyRainy:nth-child(2) {
-        background-color: theme('colors.rainy');
+    [class^="signage-ellipse"].snowy {
+        background-color: theme('colors.snowy');
     }
     [class^="signage-ellipse"].rainy {
         background-color: theme('colors.rainy');
+    }
+    [class^="signage-ellipse"].hot {
+        background-color: theme('colors.hot');
     }
 }
