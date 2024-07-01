@@ -23,15 +23,15 @@ export default {
         "m": "clamp(1.4rem, 3vw, 1.6rem)",
         "ml": "clamp(1.8rem, 3vw, 2rem)",
         "l": "clamp(2rem, 3vw, 2.4rem)",
-        "xl": "clamp(6rem, 4vw, 6.4rem)",
-        "xxl": "clamp(10rem, 4vw, 12rem)",
+        "xl": "clamp(6rem, 6vw, 6.4rem)",
+        "xxl": "clamp(12rem, 8vw, 16rem)",
       },
       lineHeight: {
         "s": "clamp(1rem, 3vw, 1.2rem)",
         "m": "clamp(1.4rem, 3vw, 1.6rem)",
         "ml": "clamp(1.8rem, 3vw, 2rem)",
         "l": "clamp(2rem, 3vw, 2.4rem)",
-        "xl": "clamp(6rem, 4vw, 6.4rem)",
+        "xl": "clamp(6rem, 6vw, 6.4rem)",
         "xxl": ".75",
       },
       spacing: {

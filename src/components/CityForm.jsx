@@ -16,7 +16,7 @@ const CityForm = () => {
 
     const {setCity} = useGlobalContext();
 
-    return <div className="form-container flex flex-col p-2 l:absolute l:right-[0]">
+    return <div className="form-container flex flex-col p-2 l:p-3">
         <form onSubmit={submitCity} className="city-form flex items-center gap-1 z-10 left-2 right-2" >
 
             <label className="uppercase text-m">City:</label>
@@ -26,7 +26,7 @@ const CityForm = () => {
                 type="text" 
                 name="city" 
                 id="city" 
-                className="text-m uppercase bg-transparent border-b-2 border-gray-200 border-dashed color-primary bg-transparent flex-1 focus:outline-gray-100 "
+                className="text-m uppercase bg-transparent border-b-2 border-gray-200 border-dashed color-primary bg-transparent flex-1 focus:outline-none"
             />
             <button 
                 type="submit"

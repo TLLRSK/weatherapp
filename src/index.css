@@ -12,7 +12,7 @@
     body {
         line-height: 1;
         -webkit-font-smoothing: antialiased;
-        @apply h-dvh bg-gray-0;
+        @apply h-dvh bg-primary;
     }
     img, picture, video, canvas, svg {
         display: block;
@@ -47,11 +47,14 @@
     }
 }
 @layer components {
+    .weatherapp {
+        box-shadow: 0px 0px 6px 0px theme('colors.gray-200');
+    }
     swiper-slide {
-        @apply w-fit border-r-2 border-secondary border-dashed;
+        @apply w-fit border-r-2 border-gray-200 border-dashed;
     }
     swiper-container{
-        @apply border-t-2 border-secondary border-dashed;
+        @apply border-t-2 border-gray-200 border-dashed;
     }
     .signage--current {
         @apply flex flex-col items-center;
