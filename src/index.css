@@ -48,7 +48,7 @@
 }
 @layer components {
     .weatherapp.sunny {
-        @apply bg-sunny-0;
+        @apply bg-sunny;
     }
     .weatherapp.cloudy {
         @apply bg-gray-100;
