@@ -1,11 +1,11 @@
-import {useConditionCodes, Signage} from "../util";
+import {useConditionCodes} from "../util";
 
 const CurrentSignage = (data) => {
 
-    const signages = useConditionCodes(data);
+    const {conditionText, iconUrl} = useConditionCodes(data);
 
     return  <div className="signage--current flex-1 flex flex-col justify-center">
-        <Signage signages={signages}/>
+        <img src={iconUrl} alt={conditionText} className="w-6 h-6"/>
     </div>
 }
 export default CurrentSignage;

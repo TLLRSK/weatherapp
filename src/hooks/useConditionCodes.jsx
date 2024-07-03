@@ -1,15 +1,11 @@
 const useConditionCodes = (data) => {
     const code = data.condition.code;
-    const temp = data.temp_c;
     const conditionCodes = {
         sunny: ["1000"],
-        partlyCloudy: ["1003"],
-        cloudy: ["1006", "1009"],
-        partlyRainy: ["1150", "1153", "1063", "1180", "1183", "1186", "1189", "1240", "1243", "1273"],
-        rainy: ["1192", "1195", "1198", "1201", "1246", "1276"],
+        cloudy: ["1003", "1006", "1009"],
+        rainy: ["1150", "1153", "1063", "1180", "1183", "1186", "1189", "1240", "1243", "1273", "1192", "1195", "1198", "1201", "1246", "1276"],
         misty: ["1030", "1135", "1147"],
-        sleety: ["1069", "1204", "1207", "1249", "1252", "1261"],
-        snowy: ["1066", "1114", "1210", "1213", "1216", "1219", "1222", "1225", "1237", "1279", "1282"],
+        snowy: ["1066", "1114", "1210", "1213", "1216", "1219", "1222", "1225", "1237", "1279", "1282", "1069", "1204", "1207", "1249", "1252", "1261"],
     }
     
     const getConditionText = (code) => {
@@ -22,28 +18,23 @@ const useConditionCodes = (data) => {
         return 'unknown';
     }
 
-    const getSignages = (conditionText) => {
+    const getIconUrl = (conditionText) => {
+        const baseUrl = '../../src/assets/weatherIcons/';
         switch (conditionText) {
             case "sunny":
-                return temp < 30 ? ["sunny-0", "sunny-100"] : ["sunny-100", "hot"];
-            case "partlyCloudy":
-                return ["sunny-0", "cloudy"];
+                return `${baseUrl}sun.png`;
             case "cloudy":
-                return ["cloudy", "cloudy"];
-            case "partlyRainy":
-                return ["cloudy", "rainy"];
+                return `${baseUrl}cloud.png`;
             case "rainy":
-                return ["rainy"];
+                return `${baseUrl}drop.png`;
             case "misty":
-                return ["misty"];
-            case "sleety":
-                return ["rainy", "snowy"];
+                return `${baseUrl}mist.png`;
             case "snowy":
-                return ["snowy"];
+                return `${baseUrl}snow.png`;
         }
     }
     const conditionText = getConditionText(code);
-    const signages = getSignages(conditionText);
-    return signages;
+    const iconUrl = getIconUrl(conditionText);
+    return {conditionText, iconUrl};
 }
 export default useConditionCodes;
