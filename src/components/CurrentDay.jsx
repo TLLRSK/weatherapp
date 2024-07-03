@@ -22,9 +22,9 @@ const CurrentDay = () => {
 
     return <section className="current-day p-2 flex-1 flex flex-col l:p-3">
 
-        <div className="location-container flex justify-between">
+        <div className="location-container flex flex-col gap-0 justify-between">
             <h2 className="text-l font-bold uppercase">{name}</h2>
-            <h3 className="text-l font-bold uppercase">{country}</h3>
+            <h3 className="text-s uppercase">{country}</h3>
         </div>
 
         <div className="forecast-container flex-1 flex flex-col">

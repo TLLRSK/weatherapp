@@ -5,7 +5,7 @@ const Hour = (hour) => {
     const formattedTime = time.split(' ').pop();
     const hourData = {condition, temp_c};
     
-    return <li className="hour-container h-full p-2 flex flex-col items-center justify-between l:p-3">
+    return <li className="hour-container h-full pt-1 pb-1 l:p-1 flex flex-col items-center justify-between">
 
         <p className="text-s font-bold">{temp_c}°</p>
 

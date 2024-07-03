@@ -59,11 +59,14 @@
     .weatherapp.snowy {
         @apply bg-snowy;
     }
-    .weather.snowy {
+    .weather.misty {
         @apply bg-gray-0;
     }
     swiper-slide {
         @apply w-fit border-r-2 border-gray-200 border-dashed;
+    }
+    swiper-slide:nth-last-child(1) {
+        @apply border-none;
     }
     swiper-container{
         @apply border-t-2 border-gray-200 border-dashed;
