@@ -24,7 +24,7 @@ const CurrentDay = () => {
 
         <div className="location-container flex flex-col gap-0">
             <h2 className="text-l font-bold uppercase">{name}</h2>
-            <h3 className="text-s uppercase">{country}</h3>
+            {/* <h3 className="text-s uppercase">{country}</h3> */}
         </div>
 
         <div className="forecast-container flex-1 flex flex-col">
