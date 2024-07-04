@@ -26,7 +26,7 @@ const CityForm = () => {
                 type="text" 
                 name="city" 
                 id="city" 
-                className="text-m uppercase bg-none border-b-2 border-gray-200 border-dashed color-primaryflex-1 focus:outline-none "
+                className="text-m uppercase bg-transparent border-b-2 border-gray-200 border-dashed color-primary flex-1 focus:outline-none focus:bg-transparent"
             />
             <button 
                 type="submit"
