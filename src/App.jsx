@@ -8,7 +8,7 @@ import {
 import { useGlobalContext } from "./context/appContext";
 
 function App() {
-  const { currentWeather } = useGlobalContext();
+  const { currentWeather } = useGlobalContext() || '';
 
   return <div className={`weatherapp ${currentWeather} flex flex-col flex-1 xl:p-[6%]`}>
 
