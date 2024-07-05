@@ -19,7 +19,7 @@ const useConditionCodes = (data) => {
     }
 
     const getIconUrl = (conditionText) => {
-        const baseUrl = '../../src/assets/weatherIcons/';
+        const baseUrl = './public/weatherIcons/';
         switch (conditionText) {
             case "sunny":
                 return `${baseUrl}sun.png`;
