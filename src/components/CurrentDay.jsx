@@ -6,11 +6,15 @@ const CurrentDay = () => {
     const { location, current, forecast, isLoading, isError } = useGlobalContext();
 
     if (isLoading) {
-        return <div className="text-m">Loading...</div>
+        return <div className="flex items-center justify-center absolute top-[0] right-[0] bottom-[0] left-[0]">
+            <p className="text-m animate-fadeInOut">Loading...</p>
+        </div>
     }
 
     if (isError) {
-        return <div className="text-m">Something went wrong.</div>
+        return <div>
+            <p className="text-m text-red-600">Something went wrong.</p>
+        </div>
     }
 
     const { name, country } = location;

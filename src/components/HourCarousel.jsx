@@ -5,7 +5,7 @@ const HourCarousel = () => {
     const {forecast, isLoading, isError} = useGlobalContext();
 
     if (isLoading) {
-        return <div>Loading...</div>
+        return null;
     }
 
     if (isError) {

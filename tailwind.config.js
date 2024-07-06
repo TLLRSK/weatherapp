@@ -41,6 +41,15 @@ export default {
         5: 'clamp(14rem, 3vw, 18rem)',
         6: 'clamp(24rem, 4vw, 28rem)',
       },
+      keyframes: {
+        fadeInOut: {
+          '0%, 100%': { opacity: 1},
+          '50%': { opacity: 0 },
+        }
+      },
+      animation: {
+        fadeInOut: 'fadeInOut 1s ease-in-out infinite',
+      },
       screens: {
         's': '360px',
         'sm': '480px',
