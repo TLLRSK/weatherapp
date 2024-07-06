@@ -47,6 +47,9 @@
     }
 }
 @layer components {
+    .weatherapp {
+        transition: background-color .3s ease-in-out;
+    }
     .weatherapp.sunny {
         @apply bg-sunny;
     }
@@ -70,5 +73,6 @@
     }
     swiper-container{
         @apply border-t-2 border-gray-200 border-dashed;
+        cursor: grab;
     }
 }
